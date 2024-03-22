@@ -1,0 +1,6 @@
+.hand-container {
+  background-image: url("../../assets/Vector\ 1.png");
+  background-size: cover;
+  width: 350px;
+  flex-shrink: 0;
+}

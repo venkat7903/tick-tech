@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Header from "../Header";
 import Hello from "../../assets/Hello.png";
 import Image from "../../assets/Image.png";
 import SocialLinks from "../../assets/Socials Links.png";
 import mail from "../../assets/Email.png";
+import { FaFacebook } from "react-icons/fa";
 
 import "./index.css";
 
@@ -46,6 +48,13 @@ const Home = () => (
       alt="mail"
       className="fixed top-[50%] lg:right-2 xl:right-5"
     />
+    <ul>
+      <li>
+        <a href="#">
+          <FaFacebook />
+        </a>
+      </li>
+    </ul>
   </div>
 );
 

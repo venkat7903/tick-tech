@@ -25,8 +25,13 @@ class App extends Component {
       >
         <div className={appClassName}>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
+            <Route exact path="/" component={Home} isDarkTheme={isDarkTheme} />
+            <Route
+              exact
+              path="/about"
+              component={About}
+              isDarkTheme={isDarkTheme}
+            />
           </Switch>
         </div>
       </ThemeContext.Provider>

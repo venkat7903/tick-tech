@@ -5,13 +5,53 @@ import Hand from "../../assets/Rectangle.png";
 import vector4 from "../../assets/Vector 4.png";
 import vector5 from "../../assets/Vector 5.png";
 import vector3 from "../../assets/Vector 3.png";
-
-import SocialLinks from "../../assets/Socials Links.png";
 import mail from "../../assets/Email.png";
+
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaGithub,
+  FaLinkedin,
+  FaTelegram,
+} from "react-icons/fa";
 
 import "./index.css";
 
 const About = () => {
+  const links = [
+    {
+      id: 1,
+      href: "",
+      icon: FaFacebook,
+    },
+    {
+      id: 2,
+      href: "",
+      icon: FaInstagram,
+    },
+    {
+      id: 3,
+      href: "",
+      icon: FaTwitter,
+    },
+    {
+      id: 4,
+      href: "",
+      icon: FaLinkedin,
+    },
+    {
+      id: 5,
+      href: "",
+      icon: FaTelegram,
+    },
+    {
+      id: 6,
+      href: "",
+      icon: FaGithub,
+    },
+  ];
+
   return (
     <div>
       <Header />
@@ -66,16 +106,18 @@ const About = () => {
           </div>
         </div>
       </div>
-      <img
-        src={SocialLinks}
-        alt="links"
-        className="fixed top-[40%] lg:left-2 xl:left-5"
-      />
-      <img
-        src={mail}
-        alt="mail"
-        className="fixed top-[50%] lg:right-2 xl:right-5"
-      />
+      <ul className="hidden md:block fixed top-[40%] lg:left-2 xl:left-5">
+        {links.map((each) => (
+          <li className="w-[40px] mb-[25px]">
+            <a href={each.href}>
+              <each.icon size={35} />
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="hidden md:block rotate-90 font-bold fixed top-[70%] lg:right-2 xl:right-2">
+        sinhaanishkumar@outlook.com
+      </p>
     </div>
   );
 };
